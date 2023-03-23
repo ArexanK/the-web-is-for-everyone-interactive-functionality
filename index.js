@@ -88,7 +88,7 @@ app.get('/cursussen', (request, response) => {
 
 
 // Stel het poortnummer in en start express
-app.set('port', process.env.PORT || 3000)
+app.set('port', process.env.PORT || 3001)
 app.listen(app.get('port'), function () {
     console.log(`Application started on http://localhost:${app.get('port')}`)
 })
