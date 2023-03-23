@@ -1,0 +1,37 @@
+{
+  "name": "the-web-is-for-everyone-interactive-functionality",
+  "version": "0.0.1",
+  "description": "\"project the web is for everyone interactive functionality\"",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "module"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArexanK/the-web-is-for-everyone-interactive-functionality.git"
+  },
+  "keywords": [
+    "\"node\"",
+    "\"express\"",
+    "\"ejs\"",
+    "\"rest\"",
+    "\"api\""
+  ],
+  "author": "Arexan Kheyrdoon",
+  "license": "ISC",
+  "dotenv": "^16.0.3",
+  "bugs": {
+    "url": "https://github.com/ArexanK/the-web-is-for-everyone-interactive-functionality/issues"
+  },
+  "homepage": "https://github.com/ArexanK/the-web-is-for-everyone-interactive-functionality#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "module": "^1.2.5"
+  }
+}

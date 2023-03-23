@@ -1,0 +1,73 @@
+<%- include('./partials/head.ejs') %>
+
+<section>
+  <h1>Waar ben je op zoek?</h1>
+  Zin om een nieuw boek te lezen of mee te doen aan een nieuw activiteit?
+  <br />Hier vindt je een aantal suggesties!
+</section>
+
+
+
+  <section class="boekenOverzicht">
+    <h2>boeken </h2>
+ 
+    <%results.forEach(result => { %>
+   
+  
+    <article class="boek">
+      <img src="<%= result.coverimages %>" alt="boek">
+      <h4> <%= result.titles[0] %></h4>
+      <h5> <%= result.authors %></h5>
+      <p> <%= result.summaries[0] %></p>
+    </article>
+     
+     <% }) %>
+     
+  </section>
+  
+  <section class="activiteitOverzicht">
+    <h2>activiteiten </h2>
+ 
+      <% results.forEach(result => { %>
+       
+       <article class="activiteit">
+       <img src="<%= result.coverimages %>" alt="activiteit">
+       <h4> <%= result.titles[0] %></h4>
+       <p> <%= result.summaries[0] %></p>
+       
+       </article>
+       
+       <% }) %>
+  
+  
+      
+  
+  
+  </section>
+
+  <section class="cursussenOverzicht">
+    <h2>cursussen </h2>
+
+    <% results.forEach(result => { %>
+     
+     <article class="cursussen">
+     <img src="<%= result.coverimages %>" alt="cursussen">
+     <h4> <%= result.titles[0] %></h4>
+     <p> <%= result.summaries[0] %></p>
+     
+     </article>
+     
+     <% }) %>
+
+
+    
+
+
+</section>
+
+
+
+  </body>
+  </html>
+
+<%- include('./partials/foot.ejs') %>

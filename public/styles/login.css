@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    height: 100vh;
+    display: grid;
+    place-items: flex-start;
+
+}
+
+.typing-title {
+
+
+    color: red;
+    font-size: 10em;
+    font-weight: 900;
+    margin-bottom: 1em;
+
+
+    animation: typing 2s steps(3), blink-caret .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+
+}
+
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: rgb(248, 11, 11);
+    }
+}
+
+
+
+body {
+    height: 100vh;
+    display: flex;
+    margin-bottom: 1em;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+
+
+
+
+.LoginForm {
+    width: 25rem;
+    height: 30rem;
+    max-width: 320px;
+    position: fixed;
+    margin-top: 5em;
+
+
+}
+
+.LoginForm form {
+    top: 50%;
+    left: 50%;
+    width: 16rem;
+    height: 24rem;
+    max-width: 320px;
+    position: absolute;
+    padding: 50px 35px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(120, 119, 124, 0.6);
+    background-color: rgb(245, 245, 245);
+}
+
+form * {
+    border: none;
+    outline: none;
+    color: #8b8b8b;
+    letter-spacing: 0.5px;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+}
+
+.inputGroup label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.inputGroup input {
+    width: 92%;
+    height: 50px;
+    display: block;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 3px;
+    background-color: rgba(32, 24, 24, 0.07);
+}
+
+::placeholder {
+    color: #ffffff;
+}
+
+
+
+.submitForm {
+    width: 100%;
+    z-index: 1;
+    margin-top: 30px;
+    color: #8b8b8b;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+    background: #fff;
+}
+
+.submitForm::before {
+    content: "";
+    top: 0%;
+    left: -100%;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    transition: left 0.4s, color 0.4s;
+    background-color: #d85353;
+}
+
+.submitForm:hover {
+    color: rgb(255, 255, 255);
+}
+
+.submitForm:hover::before {
+    left: 0%;
+}
