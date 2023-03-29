@@ -1,38 +1,5 @@
 /*Mobile first*/
 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
-
-@font-face {
-    font-family: 'avenir_lt_std95_black';
-    src: url('../assets/fonts/avenir/avenirltstd-black-webfont.woff2') format('woff2'),
-        url('../assets/fonts/avenir/avenirltstd-black-webfont.woff') format('woff');
-    font-weight: heavy;
-    font-style: normal;
-}
-
-
-
-
-@font-face {
-    font-family: 'avenir_lt_std45_book';
-    src: url('../assets/fonts/avenir/avenirltstd-book-webfont.woff2') format('woff2'),
-        url('../assets/fonts/avenir/avenirltstd-book-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-
-
-@font-face {
-    font-family: 'avenir_lt_std55_roman';
-    src: url('../assets/fonts/avenir/avenirltstd-roman-webfont.woff2') format('woff2'),
-        url('../assets/fonts/avenir/avenirltstd-roman-webfont.woff') format('woff');
-    font-weight: light;
-    font-style: normal;
-}
-
-
 
 
 * {
@@ -112,7 +79,7 @@ body {
 h3 {
 
     color: rgb(148, 148, 148);
-    font-family: avenir_lt_std95_black;
+
     font-weight: bold;
     font-size: 1rem;
 
@@ -124,14 +91,14 @@ h3 {
     font-size: 1.5rem;
     font-weight: 900;
     color: rgb(71, 70, 70);
-    font-family: avenir_lt_std55_roman;
+
 }
 
 .subtitle1 {
     font-size: 1.5rem;
     font-weight: 900;
     color: rgb(206, 199, 199);
-    font-family: avenir_lt_std55_roman;
+
 }
 
 
@@ -156,34 +123,9 @@ h3 {
 
 
 
-
-
-
-
-
-
-
-.card-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px 40px;
-
-}
-
-
-a {
-    color: rgb(71, 70, 70);
-    text-decoration: none;
-}
-
-
-
-
-
 .nav-links {
-
-
-
+    text-decoration: none;
+    color: black;
     margin: 0 auto;
     height: 0;
     overflow: hidden;
@@ -197,6 +139,7 @@ a {
     height: 50vh;
 
 }
+
 
 /*searchbar*/
 
@@ -265,251 +208,13 @@ a {
 
 
 
-/*aanbevolen activiteiten section*/
 
-section>h1 {
-    text-decoration: none;
-    color: black;
-    font-family: avenir_lt_std95_black;
-    font-size: 2rem;
-    font-weight: 900;
-    text-align: center;
-}
 
-/* 
-section>h2 {
-    text-decoration: none;
-    color: rgb(223, 22, 22);
-    font-family: avenir_lt_std95_black;
-    font-weight: bold;
-    font-size: 2rem;
 
-    text-align: center;
-} */
 
-section>h3 {
-    text-decoration: none;
-    color: rgb(135, 135, 135);
-    font-family: avenir_lt_std95_black;
-    font-weight: bold;
-    font-size: 2rem;
 
-    text-align: center;
-}
 
 
-
-section {
-    text-decoration: none;
-    color: rgb(148, 148, 148);
-    font-family: avenir_lt_std55_roman;
-    font-size: 1.5rem;
-    font-weight: lighter;
-    text-align: center;
-}
-
-section>.boekenOverzicht {}
-
-section>.activiteitenOverzicht {}
-
-section>.cursussenOverzicht {}
-
-.container {
-    display: flex;
-
-
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-.box {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 10px;
-    overflow: hidden;
-}
-
-.box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
-}
-
-.box:hover img {
-    transform: scale(1.2);
-}
-
-.box button {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgb(150, 150, 150);
-    border: none;
-    font-size: 16px;
-    font-weight: lighter;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.5s;
-}
-
-.box:hover button {
-    background-color: rgba(134, 36, 36, 0.8);
-}
-
-
-
-
-
-
-/* end aanbevolen activiteiten*/
-
-
-
-
-/* rsponsive cards gelezen boeken*/
-
-
-
-
-
-
-p {
-    font-weight: lighter;
-}
-
-.card-container {
-
-    width: 100%;
-    display: flex;
-    justify-content: relative;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 30px;
-
-    height: 300px;
-
-
-
-
-
-
-}
-
-
-.card-container .card {
-    position: relative;
-    max-width: 300px;
-    height: 215px;
-    background: rgb(226, 228, 228);
-    margin: 50px 20px;
-    padding: 20px 15px;
-    flex-direction: row;
-
-
-    box-shadow: 0 5px 5px 3px rgba(240, 255, 255);
-    transition: 0.5s ease-in-out;
-
-}
-
-
-.card-container .card:hover {
-    height: 420px;
-
-}
-
-.card-container .card .imagBx {
-    color: white;
-    background: rgb(236, 236, 236);
-    width: 260px;
-    height: 260px;
-    top: -60px;
-    left: 20px;
-    z-index: 10;
-    border-radius: 4px;
-
-}
-
-
-
-.card-container .card .imgBx .img h4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-}
-
-.card-container .card .imgBx .img {
-
-    max-width: 100%;
-    border-radius: 4px;
-}
-
-.card-container .card .content {
-    position: relative;
-    margin-top: -150px;
-    padding: 10px 5px;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    visibility: hidden;
-    background-color: rgb(236, 236, 236);
-    transition: 0.3s ease-in-out;
-    line-height: 29px;
-    max-height: 200px;
-}
-
-
-.card-container .card .content p {
-    padding: 10px;
-}
-
-.card-container .card:hover .content {
-
-    visibility: visible;
-    opacity: 1;
-    margin-top: -40px;
-    transition-delay: 0.3s;
-
-}
-
-button {
-
-    border: none;
-    font-size: 14px;
-    color: #FFF;
-    font-family: avenir_lt_std95_black;
-    font-weight: lighter;
-    padding: 4px 10px;
-    background-color: #000000;
-    border-radius: 6px;
-
-    cursor: pointer;
-    align-items: center;
-    display: inline-block;
-    margin: 0.5em;
-    padding: 1em 1em;
-    overflow: hidden;
-    position: relative;
-    text-decoration: none;
-
-}
-
-.gelezen {
-    margin: 0 auto;
-    width: 200px;
-}
-
-
-.activiteiten {
-    margin: 0 auto;
-    width: 100px;
-
-}
 
 
 

@@ -2,6 +2,7 @@ import express from 'express'
 import * as dotenv from 'dotenv'
 
 const url = 'https://zoeken.oba.nl/api/v1'
+const postURL = 'https://api.oba.fdnd.nl/api/v1/'
 
 // activate dotenv
 dotenv.config()
@@ -10,8 +11,19 @@ dotenv.config()
 const activityURL = url + '/search/?q=special:all%20table:activiteiten&authorization=' + process.env.authorization + '&output=json'
 const bookURL = url + '/search/?q=boek&authorization=' + process.env.authorizationB + '&refine=true&output=json'
 const courseURL = url + '/search/?q=special:all%20table:jsonsrc&authorization=' + process.env.authorization + '&output=json'
+const reservURL = postURL + '/reserveringen'
+
+
+
 // Maak een nieuwe express app
 const app = express()
+
+
+// Stel afhandeling van formulieren in
+app.use(express.json())
+app.use(express.urlencoded({
+    extended: true
+}))
 
 console.log(process.env.authorizationB)
 
@@ -37,7 +49,7 @@ app.get('/boeken', (request, response) => {
                 return results.titles.includes(request.query.titles)
             })
         }
-        console.log("hier staat de log van dataclone", dataClone)
+        // console.log("hier staat de log van dataclone", dataClone)
         response.render('index', dataClone)
     });
 });
@@ -62,7 +74,7 @@ app.get('/detail', (request, response) => {
     response.render('detail')
 })
 
-//COURSE
+//Cursussen
 app.get('/cursussen', (request, response) => {
     fetchJson(courseURL).then((data) => {
         let dataClone = structuredClone(data);
@@ -80,15 +92,26 @@ app.get('/cursussen', (request, response) => {
 });
 
 
+//Reserveringen
 
 
+app.get('/reserveren', (request, response) => {
+    response.render('reserveren')
+})
 
+app.post('/reserveren', (request, response) => {
+    const postURL = 'https://api.oba.fdnd.nl/api/v1/'
+    const url = `${postURL}/reserveren`
 
+    console.log(request.body)
 
-
+    postJson(url, request.body).then((data) => {
+        console.log(JSON.stringify(data))
+    })
+})
 
 // Stel het poortnummer in en start express
-app.set('port', process.env.PORT || 3001)
+app.set('port', process.env.PORT || 6001)
 app.listen(app.get('port'), function () {
     console.log(`Application started on http://localhost:${app.get('port')}`)
 })
@@ -100,6 +123,15 @@ app.listen(app.get('port'), function () {
  */
 async function fetchJson(url) {
     return await fetch(url)
+        .then((response) => response.json())
+        .catch((error) => error)
+}
+
+export async function postJson(url) {
+    return await fetch(url, {
+            method: "post",
+
+        })
         .then((response) => response.json())
         .catch((error) => error)
 }
