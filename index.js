@@ -71,6 +71,10 @@ app.get('/activiteiten', (request, response) => {
 
 // DETAIL
 app.get('/detail', (request, response) => {
+
+
+
+
     response.render('detail')
 })
 
@@ -106,12 +110,12 @@ app.post('/reserveren', (request, response) => {
     console.log(request.body)
 
     postJson(url, request.body).then((data) => {
-        console.log(JSON.stringify(data))
+        // console.log(JSON.stringify(data))
     })
 })
 
 // Stel het poortnummer in en start express
-app.set('port', process.env.PORT || 6001)
+app.set('port', process.env.PORT || 6002)
 app.listen(app.get('port'), function () {
     console.log(`Application started on http://localhost:${app.get('port')}`)
 })
@@ -130,7 +134,10 @@ async function fetchJson(url) {
 export async function postJson(url) {
     return await fetch(url, {
             method: "post",
-
+            body: JSON.stringify(body),
+            headers: {
+                "Content-Type": "application/json"
+            }
         })
         .then((response) => response.json())
         .catch((error) => error)
