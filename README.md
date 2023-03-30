@@ -26,8 +26,7 @@ Userstory: Als oba lid wil ik de zoekresultaten kunnen filteren of sorteren, zod
 Voor deze opdracht heb ik de optie om te reserveren gekoppeld aan de website, hierdoor kunnen leden boeken, cursussen en activiteiten reserveren. Met gebruik van Post Api van oba heb ik de api kunnen koppelen waardoor nu leden op de detail pagina een boek, activiteit en cursus kunnen reserveren. 
 
 
-link: https://pear-crown.cyclic.app/
-
+link: https://tricky-shawl-fawn.cyclic.app
 ## 🖇 Kenmerken
 
 - Rest Api
