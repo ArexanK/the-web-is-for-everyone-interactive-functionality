@@ -7,7 +7,7 @@
 </section>
 
   <section>
-    <% if (results !== undefined) { %>
+    <% if (typeof results !== 'undefined' || results !== null) { %>
       <%results.forEach(result => { %>
     
           <article>
