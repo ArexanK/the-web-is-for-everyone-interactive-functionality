@@ -51,15 +51,16 @@ app.get('/', (request, response) => {
 app.get('/boeken', (request, response) => {
     fetchJson(bookURL).then((data) => {
         let dataClone = structuredClone(data);
-
+        let backup = {
+            results: []
+        }
         if (request.query.titles) {
             dataClone.results.titles = dataClone.results.titles.filter(function (title) {
                 return results.titles.includes(request.query.titles)
             })
         }
-        console.log(dataClone)
         // console.log("hier staat de log van dataclone", dataClone)
-        response.render('catagory', dataClone)
+        response.render('catagory', dataClone || backup)
     });
 });
 
