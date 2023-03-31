@@ -59,7 +59,7 @@ app.get('/boeken', (request, response) => {
                 return results.titles.includes(request.query.titles)
             })
         }
-        // console.log("hier staat de log van dataclone", dataClone)
+        console.log(dataClone)
         response.render('catagory', dataClone)
     });
 });
