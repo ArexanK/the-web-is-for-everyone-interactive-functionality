@@ -28,38 +28,35 @@
 
   <section class="activiteitOverzicht">
     <!-- <h2>activiteiten</h2> -->
+    <% if (activities && activities.length) { %>
   
-    <% activities.forEach(result => { %>
-  
-    <article class="activiteit">
-      <img src="<%= result.coverimages %>" alt="activiteit" />
-      <h4><%= result.titles[0] %></h4>
-      <p><%= result.summaries[0] %></p>
-    </article>
-  
-    <% }) %>
+      <% activities.forEach(result => { %>
+    
+      <article class="activiteit">
+        <img src="<%= result.coverimages %>" alt="activiteit" />
+        <h4><%= result.titles[0] %></h4>
+        <p><%= result.summaries[0] %></p>
+      </article>
+    
+      <% }) %>
+    <% } %>
   </section>
 
   <section class="cursussenOverzicht">
     <!-- <h2>cursussen</h2> -->
   
-    <% courses.forEach(result => { %>
-  
-    <article class="cursussen">
-      <img src="<%= result.coverimages %>" alt="cursussen" />
-      <h4><%= result.titles[0] %></h4>
-      <p><%= result.summaries[0] %></p>
-    </article>
-  
-    <% }) %>
+    <% if (courses && courses.length) { %>
+      <% courses.forEach(result => { %>
+    
+        <article class="cursussen">
+          <img src="<%= result.coverimages %>" alt="cursussen" />
+          <h4><%= result.titles[0] %></h4>
+          <p><%= result.summaries[0] %></p>
+        </article>
+    
+      <% }) %>
+    <% } %>
+
   </section>
-  
-
- 
-
-
-
-  </body>
-  </html>
 
 <%- include('./partials/foot.ejs') %>

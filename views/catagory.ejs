@@ -7,23 +7,22 @@
 </section>
 
   <section>
- 
-    <%results.forEach(result => { %>
-  
-        <article>
-          <img src="<%= result.coverimages %>" alt="boek">
-          <h4> <%= result.titles[0] %></h4>
-          <% if (result.authors) { %>
-          <h5> <%= result.authors %></h5>
-           <% } %>
-          <p> <%= result.summaries[0] %></p>
-        </article>
-     
-     <% }) %>
+    <% if (results && results.length) { %>
+      <%results.forEach(result => { %>
+    
+          <article>
+            <img src="<%= result.coverimages %>" alt="boek">
+            <h4> <%= result.titles[0] %></h4>
+            <% if (result.authors) { %>
+            <h5> <%= result.authors %></h5>
+            <% } %>
+            <p> <%= result.summaries[0] %></p>
+          </article>
+      
+      <% }) %>
+    <% } %>
+
      
   </section>
-
-  </body>
-  </html>
 
 <%- include('./partials/foot.ejs') %>

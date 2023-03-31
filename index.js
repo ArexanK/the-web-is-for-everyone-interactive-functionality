@@ -57,6 +57,7 @@ app.get('/boeken', (request, response) => {
                 return results.titles.includes(request.query.titles)
             })
         }
+        console.log(dataClone)
         // console.log("hier staat de log van dataclone", dataClone)
         response.render('catagory', dataClone)
     });
