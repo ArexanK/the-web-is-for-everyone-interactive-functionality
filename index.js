@@ -34,8 +34,16 @@ app.use(express.static('public'))
 
 // Maak een route voor de index
 app.get('/', (request, response) => {
-    fetchJson(bookURL).then((data) => {
-        response.render('index', data)
+    fetchJson(bookURL).then((books) => {
+        fetchJson(activityURL).then((activities) => {
+            fetchJson(courseURL).then((courses) => {
+                response.render('homepage', {
+                    books: books.results,
+                    activities: activities.results,
+                    courses: courses.results
+                })
+            })
+        })
     })
 })
 
@@ -50,7 +58,7 @@ app.get('/boeken', (request, response) => {
             })
         }
         // console.log("hier staat de log van dataclone", dataClone)
-        response.render('index', dataClone)
+        response.render('catagory', dataClone)
     });
 });
 
@@ -65,7 +73,7 @@ app.get('/activiteiten', (request, response) => {
             })
         }
 
-        response.render('index', dataClone)
+        response.render('catagory', dataClone)
     });
 });
 
@@ -91,7 +99,7 @@ app.get('/cursussen', (request, response) => {
             })
         }
 
-        response.render('index', dataClone)
+        response.render('catagory', dataClone)
     });
 });
 

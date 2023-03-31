@@ -11,9 +11,8 @@
   <section class="boekenOverzicht">
     <!-- <h2>boeken </h2> -->
  
-    <%results.forEach(result => { %>
+    <%books.forEach(result => { %>
    
-  
         <article class="boek">
           <img src="<%= result.coverimages %>" alt="boek">
           <h4> <%= result.titles[0] %></h4>
@@ -23,14 +22,13 @@
      
      <% }) %>
     
-     
   </section>
 
 
   <section class="activiteitOverzicht">
     <!-- <h2>activiteiten</h2> -->
   
-    <% results.forEach(result => { %>
+    <% activities.forEach(result => { %>
   
     <article class="activiteit">
       <img src="<%= result.coverimages %>" alt="activiteit" />
@@ -40,12 +38,11 @@
   
     <% }) %>
   </section>
-  
 
   <section class="cursussenOverzicht">
     <!-- <h2>cursussen</h2> -->
   
-    <% results.forEach(result => { %>
+    <% courses.forEach(result => { %>
   
     <article class="cursussen">
       <img src="<%= result.coverimages %>" alt="cursussen" />
