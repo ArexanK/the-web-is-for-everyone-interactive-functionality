@@ -60,7 +60,7 @@ app.get('/boeken', (request, response) => {
             })
         }
         // console.log("hier staat de log van dataclone", dataClone)
-        response.render('catagory', dataClone || backup)
+        response.render('catagory', dataClone)
     });
 });
 
