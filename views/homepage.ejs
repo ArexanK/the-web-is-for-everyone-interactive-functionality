@@ -11,7 +11,8 @@
   <section class="boekenOverzicht">
     <!-- <h2>boeken </h2> -->
  
-    <%books.forEach(result => { %>
+    <% if (books.length) { %>
+      <%books.forEach(result => { %>
    
         <article class="boek">
           <img src="<%= result.coverimages %>" alt="boek">
@@ -19,8 +20,8 @@
           <h5> <%= result.authors %></h5>
           <p> <%= result.summaries[0] %></p>
         </article>
-     
-     <% }) %>
+      <% }) %>
+    <% } %>
     
   </section>
 
