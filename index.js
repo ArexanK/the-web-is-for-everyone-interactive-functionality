@@ -13,9 +13,6 @@ const bookURL = url + '/search/?q=boek&authorization=' + process.env.authorizati
 const courseURL = url + '/search/?q=special:all%20table:jsonsrc&authorization=' + process.env.authorization + '&output=json'
 const reservURL = postURL + '/reserveringen'
 
-console.log('A: ', process.env.authorization)
-console.log('B: ', process.env.authorizationB)
-
 // Maak een nieuwe express app
 const app = express()
 
@@ -60,7 +57,7 @@ app.get('/boeken', (request, response) => {
                 return results.titles.includes(request.query.titles)
             })
         }
-        console.log(dataClone)
+        // console.log(dataClone)
         response.render('catagory', dataClone)
     });
 });
