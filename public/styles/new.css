@@ -14,6 +14,7 @@ body {
     font-weight: bold;
     font-size: 1rem;
     background-color: white;
+
 }
 
 article {
@@ -22,9 +23,10 @@ article {
     gap: 1rem;
 }
 
-/* main section:first-child {
+main {
     margin: 0 auto;
-} */
+    padding-left: 1.5em;
+}
 
 section {
     padding: 1rem;
@@ -39,10 +41,45 @@ section {
     padding: 1rem;
 }
 
+.artcile>.boek {
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.boek article {
+    width: 16em;
+    height: 22em;
+    border: 0.15em solid gray;
+    list-style: none;
+    padding: 1rem;
+    position: relative;
+}
+
+.boek .article img {
+    height: 12em;
+    aspect-ratio: 1/1;
+    object-fit: scale-down;
+    margin: 0em 0.8em;
+}
+
+.boek .article div {
+    bottom: 0.5em;
+    position: absolute;
+    right: 1rem;
+}
+
+.article h2 {
+    overflow: hidden;
+}
+
 
 
 /*NAVBAR*/
-.logo img {
+.logo a img {
 
     align-items: left;
     position: relative;
@@ -52,7 +89,7 @@ section {
 
 }
 
-.items article {
+.item article {
     width: 16em;
     height: 22em;
     border: 0.15em solid gray;
@@ -75,9 +112,12 @@ section {
 }
 
 .item h2 {
-    overflow: hidden;
+    overflow: visible;
 }
 
+.item p {
+    overflow: hidden;
+}
 
 
 
@@ -129,12 +169,16 @@ h1 {
     font-weight: 700;
     line-height: 1;
     max-width: 20em;
+
 }
 
 h2 {
     font-size: 1em;
-    font-weight: 500;
+    font-weight: 900;
     max-width: 20em;
+    color: rgb(0, 0, 0);
+
+
 }
 
 h3 {
@@ -146,6 +190,24 @@ h3 {
 p {
     max-width: 30em;
     padding-bottom: 1rem;
+}
+
+section>h2 {
+    font-size: 1.5em;
+    max-width: 30em;
+    color: rgb(148, 148, 148);
+    font-weight: 500;
+    margin: 0 auto;
+    padding-left: 7.5em;
+    padding-bottom: 2em;
+
+}
+
+section>h1 {
+    margin: 0 auto;
+    padding-left: 5em;
+
+
 }
 
 
