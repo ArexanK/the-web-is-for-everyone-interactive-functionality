@@ -1,6 +1,7 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 
+<img width="1196" alt="Screenshot 2023-04-05 at 19 39 59" src="https://user-images.githubusercontent.com/94745953/230168091-ae712b81-02d5-4e43-97f6-ac8433530fbd.png">
 
 
 
@@ -48,9 +49,11 @@ Express is een webframework voor Node.js dat wordt gebruikt voor het bouwen van 
 
 ### .gitignore en .env
 
+Voor dit project heb ik .env gebruikt omdat wij met echte data gingen werken. Om Api key te beschermen heb ik een .env mapje aangemaakt en daar API key aangekoppeld. Api key van Oba is hierdoor beschermd. Door .env in de gitignore mapje te plaatsen gaat de API key niet mee naar github en is dit niet zichtbaar online. 
+
 
 ### Progressive Enhancement
-
+Om ervoor te zorgen dat iedereen toegang heeft tot het project, heb ik de methode "progressive enhancement" gebruikt. Hierbij heb ik eerst de inhoud van de webpagina opgebouwd met behulp van HTML, geïntegreerd in EJS. Vervolgens heb ik functionaliteit toegevoegd door middel van een formulier dat de POST-methode gebruikt. Voor CSS heb ik  diverse CSS-stijlen gebruikt om de website te stijlen in de huisstijl van OBA. Ten slotte heb ik een zoekbalk gemaakt met behulp van JavaScript en Node gebruikt om data van OBA api op te halen. 
 
 
 ## 🖥 Gebruik
@@ -61,6 +64,7 @@ Express is een webframework voor Node.js dat wordt gebruikt voor het bouwen van 
 - MDN docs
 - Youtube
 - google
+- can i use website
 
 ## 👾 Licentie
 
