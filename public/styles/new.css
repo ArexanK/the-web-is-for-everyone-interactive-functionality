@@ -21,11 +21,13 @@ article {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
 }
 
 main {
     margin: 0 auto;
-    padding-left: 1.5em;
+    padding-left: 10em;
+    align-items: center;
 }
 
 section {
@@ -119,7 +121,14 @@ section {
     overflow: hidden;
 }
 
+p>b {
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1;
+    max-width: 20em;
+    padding-top: 2em;
 
+}
 
 
 .nav-link {
@@ -187,7 +196,7 @@ h3 {
     font-weight: 500;
 }
 
-p {
+article>p {
     max-width: 30em;
     padding-bottom: 1rem;
 }
