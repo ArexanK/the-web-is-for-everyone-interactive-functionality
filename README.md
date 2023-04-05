@@ -38,10 +38,19 @@ link: https://tricky-shawl-fawn.cyclic.app
 - Cyclic
 
 ## ⬇️ Installatie
+
+### NPM
+
 Voordat ik aan dit project ging werken heb ik eerst NPM install gedaan omdat we gaan werken met rest api en databases.
 Wanneer je npm install uitvoert, leest npm het package.json-bestand in de hoofdmap van je project, dat de afhankelijkheden voor het project vermeldt. Vervolgens downloadt en installeert het die afhankelijkheden in de node_modules map in het project.
 
 Express is een webframework voor Node.js dat wordt gebruikt voor het bouwen van webapplicaties en API's. EJS is een templating engine die wordt gebruikt voor het genereren van dynamische HTML-pagina's op basis van gegevens vanuit een server. In combinatie worden Express en EJS vaak gebruikt voor het bouwen van dynamische websites
+
+### .gitignore en .env
+
+
+### Progressive Enhancement
+
 
 
 ## 🖥 Gebruik
