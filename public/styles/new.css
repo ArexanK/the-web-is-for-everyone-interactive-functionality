@@ -98,6 +98,7 @@ section {
     list-style: none;
     padding: 1rem;
     position: relative;
+    color: black;
 }
 
 .item img {
@@ -134,16 +135,24 @@ p>b {
 .nav-link {
     list-style: none;
     float: center;
-    margin-left: 40px;
+    margin-left: 30px;
     border-bottom: 2px solid rgb(66, 65, 65);
-    width: 5rem;
+    width: 8rem;
     justify-content: space-between;
-
-
     text-decoration: none;
 
 }
 
+/* .nav-links {
+    text-decoration: none;
+    color: black;
+    margin: 0 auto;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+
+} */
 
 
 .navbar {
@@ -229,16 +238,6 @@ article>button {
 
 
 
-/* 
-h3 {
-
-    color: rgb(148, 148, 148);
-
-    font-weight: bold;
-    font-size: 1rem;
-
-    text-align: center;
-} */
 
 
 .subtitle2 {
@@ -277,17 +276,6 @@ h3 {
 
 
 
-.nav-links {
-    text-decoration: none;
-    color: black;
-    margin: 0 auto;
-    height: 0;
-    overflow: hidden;
-    display: flex;
-
-
-
-}
 
 .nav-open {
     height: 50vh;
