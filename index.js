@@ -7,11 +7,20 @@ const postURL = 'https://api.oba.fdnd.nl/api/v1/'
 // activate dotenv
 dotenv.config()
 
-
+//opbouw verschillende URL van de API
 const activityURL = url + '/search/?q=special:all%20table:activiteiten&authorization=' + process.env.authorization + '&output=json'
 const bookURL = url + '/search/?q=boek&authorization=' + process.env.authorizationB + '&refine=true&output=json'
 const courseURL = url + '/search/?q=special:all%20table:jsonsrc&authorization=' + process.env.authorization + '&output=json'
 const reservURL = postURL + '/reserveringen'
+
+// opboouw boek url van de api voor detail page
+
+const urlSearch = "?q=";
+const urlDefault = "boek";
+const urlKey = "&authorization=1e19898c87464e239192c8bfe422f280";
+const urlOutput = "&refine=true&output=json";
+
+
 
 // Maak een nieuwe express app
 const app = express()
@@ -46,6 +55,7 @@ app.get('/', (request, response) => {
 })
 
 //BOEKEN
+//maakt route voor boeken pagina
 app.get('/boeken', (request, response) => {
     fetchJson(bookURL).then((data) => {
         let dataClone = structuredClone(data);
@@ -63,6 +73,7 @@ app.get('/boeken', (request, response) => {
 });
 
 //ACTIVITEITEN
+//maakt route voor activiteiten pagina
 app.get('/activiteiten', (request, response) => {
     fetchJson(activityURL).then((data) => {
         let dataClone = structuredClone(data);
@@ -78,15 +89,24 @@ app.get('/activiteiten', (request, response) => {
 });
 
 // DETAIL
-app.get('/detail', (request, response) => {
+app.get('/detail', async (request, response) => {
+    let isbn = request.query.resultIsbn || "9789045117621";
+    const bookUrl = url + urlSearch + urlDefault + urlKey + urlOutput;
 
+    // fetchJson(booksUrl).then((data) => {
 
+    const booksUrl =
+        url + urlSearch + isbn + urlKey + urlOutput;
 
+    const data = await fetch(bookUrl)
+        .then((response) => response.json())
+        .catch((err) => err);
 
-    response.render('detail')
+    response.render('detail', data)
 })
 
 //Cursussen
+//maakt een route voor cursussen pagina
 app.get('/cursussen', (request, response) => {
     fetchJson(courseURL).then((data) => {
         let dataClone = structuredClone(data);
@@ -105,8 +125,7 @@ app.get('/cursussen', (request, response) => {
 
 
 //Reserveringen
-
-
+//maakt route voor de resevering pagina
 app.get('/reserveren', (request, response) => {
     response.render('reserveren')
 })
@@ -118,9 +137,26 @@ app.post('/reserveren', (request, response) => {
     console.log(request.body)
 
     postJson(url, request.body).then((data) => {
-        // console.log(JSON.stringify(data))
+        let newReservering = {
+            ...request.body
+        }
+        console.log(newReservering);
+        if (data.id) {
+            response.redirect('/')
+
+
+
+        } else {
+            response.redirect('/')
+        }
     })
 })
+
+
+
+
+
+
 
 // Stel het poortnummer in en start express
 app.set('port', process.env.PORT || 6002)

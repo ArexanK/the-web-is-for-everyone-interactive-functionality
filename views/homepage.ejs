@@ -1,14 +1,11 @@
 <%- include('./partials/head.ejs') %>
-
-<section>
-  <h1>Waar ben je op zoek?</h1>
-  Zin om een nieuw boek te lezen of mee te doen aan een nieuw activiteit?
-  <br />Hier vindt je een aantal suggesties!
-</section>
+<%- include('./partials/header.ejs') %>
+<main>
 
 
 
-  <section class="boekenOverzicht">
+
+  <section class="item">
     <!-- <h2>boeken </h2> -->
  
     <% if (books && books.length) { %>
@@ -26,7 +23,12 @@
   </section>
 
 
-  <section class="activiteitOverzicht">
+
+
+
+
+
+  <section class="item">
     <!-- <h2>activiteiten</h2> -->
     <% if (activities && activities.length) { %>
   
@@ -40,9 +42,14 @@
     
       <% }) %>
     <% } %>
+
   </section>
 
-  <section class="cursussenOverzicht">
+
+
+
+
+  <section class="item">
     <!-- <h2>cursussen</h2> -->
   
     <% if (courses && courses.length) { %>
@@ -58,5 +65,6 @@
     <% } %>
 
   </section>
+  </main>
 
 <%- include('./partials/foot.ejs') %>

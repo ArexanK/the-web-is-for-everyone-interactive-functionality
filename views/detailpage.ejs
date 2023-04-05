@@ -1,0 +1,54 @@
+
+<%- include('./partials/head.ejs') %>
+
+
+<section class="cover">
+  
+  <article class="cover-image">
+    <img src="<%= results[0].coverimages[1] %>" alt="" />
+
+    <article>
+      
+      <h2 class="title"><%= results[0].titles[0] %></h2>
+
+      <ul class="info">
+        <li class="summ"> <span class="span2">Samenvatting:</span> <%= results[0].summaries %></li>
+        <li><span class="span">Auteur: </span> <%= results[0].authors %></li>
+        <li><span class="span">Uitgever:</span>   <%= results[0].publisher %></li>
+        <li><span class="span">Jaar: </span>  <%= results[0].year %></li>
+        <li><span class="span">Taal:</span>   <%= results[0].languages %></li>
+        <li><a href="/reserveren?id=<%= results[0].id %>"> Reserveer</a></li>
+      </ul>
+    
+    </article>
+
+  </article>
+  
+</section>
+
+<section class="summary">
+  <article>
+    <h2>Reviews:</h2>
+    <p>wats</p>
+  </article>
+</section>
+<%- include('./partials/foot.ejs') %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
