@@ -58,7 +58,7 @@ app.get('/boeken', (request, response) => {
             })
         }
         // console.log(dataClone)
-        response.render('catagory', dataClone)
+        response.render('category', dataClone)
     });
 });
 
@@ -73,7 +73,7 @@ app.get('/activiteiten', (request, response) => {
             })
         }
 
-        response.render('catagory', dataClone)
+        response.render('category', dataClone)
     });
 });
 
@@ -99,7 +99,7 @@ app.get('/cursussen', (request, response) => {
             })
         }
 
-        response.render('catagory', dataClone)
+        response.render('category', dataClone)
     });
 });
 
